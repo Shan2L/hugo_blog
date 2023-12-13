@@ -9,7 +9,7 @@
 # -------------------------------------------------------------------------------------
 
 # website title
-title = "FixIt"
+title = "Shan's Blog"
 # Hostname (and path) to the root
 baseURL = "http://Shan2L.github.io"
 # theme list
@@ -92,18 +92,18 @@ enableEmoji = true
   # site description
   description = ""
   # site keywords
-  keywords = ["Hugo", "FixIt"]
+  keywords = ["Shan2L", "Shanlin Liu", "Shanlin", "gostraight0304@gmail.com", "GosTraight2020"]
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
-  gitRepo = ""
+  gitRepo = "https://github.com/Shan2L/"
   # FixIt 0.1.1 | NEW which hash function used for SRI, when empty, no SRI is used
   # ["sha256", "sha384", "sha512", "md5"]
   fingerprint = ""
   # FixIt 0.2.0 | NEW date format
   dateFormat = "2006-01-02"
   # website images for Open Graph and Twitter Cards
-  images = []
+  images = ["/curry.jpg"]
   # FixIt 0.2.12 | NEW enable PWA
   enablePWA = false
   # FixIt 0.2.14 | NEW whether to add external Icon for external links automatically
@@ -114,10 +114,10 @@ enableEmoji = true
 
   # Author Configuration
   [params.author]
-    name = ""
-    email = ""
+    name = "Shan2L"
+    email = "gostraight0304@gmail.com"
     link = ""
-    avatar = ""
+    avatar = "/curry.jpg"
 
   # FixIt 0.2.0 | NEW App icon config
   [params.app]
@@ -138,9 +138,9 @@ enableEmoji = true
 
   # FixIt 0.2.0 | NEW Search config
   [params.search]
-    enable = false
+    enable = true
     # type of search engine ["lunr", "algolia", "fuse"]
-    type = "lunr"
+    type = "fuse"
     # max index length of the chunked content
     contentLength = 4000
     # placeholder of the search bar
@@ -178,9 +178,9 @@ enableEmoji = true
     # FixIt 0.2.0 | NEW Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = "/fixit.min.svg"
+      logo = "/boy.svg"
       # title name
-      name = "My Hugo FixIt Site"
+      name = "Shan's Blog"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
@@ -207,13 +207,13 @@ enableEmoji = true
     # For advanced use, see parameter `params.customFilePath.footer`
     custom = ""
     # FixIt 0.2.0 | NEW whether to show Hugo and theme info
-    hugo = true
+    hugo = false
     # FixIt 0.2.0 | NEW whether to show copyright info
     copyright = true
     # FixIt 0.2.0 | NEW whether to show the author
     author = true
     # Site creation year
-    since = ""
+    since = "2023-12-13"
     # FixIt 0.2.14 | NEW whether to show total word count of site content
     wordCount = true
     # FixIt 0.2.12 | NEW Public network security only in China (HTML format is supported)
@@ -263,7 +263,7 @@ enableEmoji = true
 
   # FixIt 0.2.17 | NEW TagCloud config for tags page
   [params.tagcloud]
-    enable = false
+    enable = true
     min = 14 # Minimum font size in px
     max = 32 # Maximum font size in px
     peakCount = 10 # Maximum count of posts per tag
@@ -275,32 +275,33 @@ enableEmoji = true
     rss = 10
     # Home page profile
     [params.home.profile]
-      enable = false
+      enable = true
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = ""
+      avatarURL = "/curry.jpg"
       # FixIt 0.2.17 | NEW identifier of avatar menu link
       avatarMenu = ""
       # FixIt 0.2.7 | CHANGED title shown in home page (HTML format is supported)
-      title = ""
+      title = "Sharing INFO TECH and LOVE"
       # subtitle shown in home page
-      subtitle = ""
+      subtitle = "AI framework Engineer & Incoming intern of the NCSU Generative Intelligent Computing Lab."
+                 
       # whether to use typeit animation for subtitle
-      typeit = true
+      typeit = false
       # whether to show social links
       social = true
       # FixIt 0.2.0 | NEW disclaimer (HTML format is supported)
       disclaimer = ""
     # Home page posts
     [params.home.posts]
-      enable = true
+      enable = false
       # special amount of posts in each home posts page
       paginate = 6
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]
-    GitHub = ""
+    GitHub = "https://github.com/Shan2L"
     Linkedin = ""
     Twitter = ""
     Instagram = ""
@@ -385,7 +386,7 @@ enableEmoji = true
     Douyin = ""
     TikTok = ""
     Phone = ""
-    Email = ""
+    Email = "gostraight0304@gmail.com"
     RSS = true
 
   # FixIt 0.2.0 | CHANGED Page config
@@ -419,7 +420,7 @@ enableEmoji = true
     pageStyle = "normal"
     # FixIt 0.2.17 | CHANGED Auto Bookmark Support
     # If true, save the reading progress when closing the page.
-    autoBookmark = false
+    autoBookmark = true
     # FixIt 0.2.17 | NEW whether to enable wordCount
     wordCount = true
     # FixIt 0.2.17 | NEW whether to enable readingTime
@@ -806,8 +807,8 @@ enableEmoji = true
 
   # FixIt 0.2.14 | NEW GitHub banner in the top-right or top-left corner
   [params.githubCorner]
-    enable = false
-    permalink = "https://github.com/hugo-fixit/FixIt"
+    enable = true
+    permalink = "https://github.com/Shan2L/"
     title = "View source on GitHub"
     position = "right" # ["left", "right"]
 
@@ -827,7 +828,7 @@ enableEmoji = true
 
   # FixIt 0.2.16 | NEW Reading progress bar
   [params.readingProgress]
-    enable = false
+    enable = true
     # Available values: ["left", "right"]
     start = "left"
     # Available values: ["top", "bottom"]
