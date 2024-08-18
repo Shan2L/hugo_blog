@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+
+    <link rel="stylesheet" href="/css/single-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/monokai.min.css">
+</head>
+<body>
+    <header>
+        <h1>Shan2L's Blog</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Blog</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+
+
+        <div class="post-header">
+            <h1>{{ .Title }}</h1>
+            <div class="post-meta">
+                <span class="date">Published on: {{ .Date.Format "January 2, 2006" }}</span> |
+                <span class="word-count">Word count: {{ .WordCount }}</span> |
+                <span class="reading-time">Reading time: {{ .ReadingTime }} minutes</span> 
+                <br/>
+                {{if .Params.categories}}
+
+                    <div style="display: flex; justify-content: center;">
+                    <div class="tags">category: </div>
+                        {{ range .Params.tags }}
+                            <div class="cat-item" onclick="location.href='/categories/{{ . | urlize }}'">
+                                {{ . }}
+                            </div>
+                        {{ end }}
+                    </div>
+                    </div>
+                {{end}}
+                {{if .Params.tags}}
+                    <div style="display: flex; justify-content: center;">
+                    <div class="tags">tags: </div>
+                        {{ range .Params.tags }}
+                            <div class="cat-item" onclick="location.href='/tags/{{ . | urlize }}'">
+                                {{ . }}
+                            </div>
+                        {{ end }}
+                    </div>
+                {{end}}
+        </div>
+        {{ if .Params.abstract }}
+            <div class="summary">
+                <p>{{ .Params.abstract }}</p>
+            </div>
+        {{end}}
+
+        <div class="content-body">
+            {{ .Content }}
+        </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.post-header {
+    text-align: center;
+}
+
+.tag-item, .cat-item, .series-item{
+    margin-left: 1em; 
+    color: #777;
+}
+.tag-item:hover, .cat-item:hover, .series-item:hover{
+    color: red;
+    cursor: pointer;
+}
+
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 900px;
+    width: 90%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+}
+
+
+.summary {
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #007BFF;
+    border-radius: 5px;
+    /* text-align: center; */
+    text-indent: 2em;
+}
+.summary p {
+    margin: 0;
+    font-size: 17px;
+    color: #444;
+    text-align: justify;
+}
+
+.content-body{
+    text-align: left;
+}
+
+pre {
+    white-space: pre-wrap;       /* 保持空格和换行符 */
+    word-wrap: break-word;       /* 长单词或URL将在适当的地方断开 */
+    overflow-x: auto;            /* 超出部分可以水平滚动 */
+    background-color: #2d2d2d;
+    color: #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+code {
+    white-space: pre-wrap;       /* 使单独的 code 标签也能自动换行 */
+    word-wrap: break-word;       /* 长单词或URL将在适当的地方断开 */
+}
+/* pre code {
+    padding: auto;
+} */

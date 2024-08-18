@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shan2L's Blog</title>
+    <!-- 引入公共 CSS 文件 -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>{{.Title}}</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Blog</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="blog">
+        <h2>Latest Blog Posts</h2>
+        {{ range .Pages}}
+
+        <div class="blog-post">
+            <!-- Left side: Image -->
+            <div style="flex: 0 0 100px; margin-right: 15px;" onclick="location.href='{{ .RelPermalink }}'">
+                {{ if .Params.cover }}
+                <img src="/{{.File.Dir}}{{.Params.cover}}" alt="Blog Cover" style="width: 100px; height: auto; border-radius: 5px;">
+                {{ else }}
+                <img src="/images/default_cover.png" alt="Blog Post 1" style="width: 100px; height: auto; border-radius: 5px;">   
+                {{ end }}
+
+            </div>
+            
+            <!-- Right side: Content -->
+            <div style="flex: 1;">
+                <h2 style="margin: 0 0 10px 0; font-size: 20px;">{{.Title}}</h2>
+                <p style="margin: 0; font-size: 14px; color: #777;">{{dateFormat "Monday, Jan 2, 2006" .Date}}</p>
+                <div style="display: flex;">
+                    <div style="font-size: 14px; color: #777;">category: </div>
+                    {{ range .Params.categories }} 
+                        <div class="tag-item" onclick="location.href='/categories/{{.}}'">
+                            {{.}} 
+                        </div>
+                    {{end}}
+                </div>
+                <div style="display: flex;">
+                    <div style="font-size: 14px; color: #777;">tags: </div>
+                    {{ range .Params.tags }} 
+                        <div class="tag-item" onclick="location.href='/tags/{{.}}'">
+                            {{.}} 
+                        </div>
+                    {{end}}
+                </div>
+                <p style="margin-top: 10px; font-size: 16px;">{{.Params.abstract}}</p>
+            </div>
+        </div>
+        
+        {{ end }}
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Shan2L's Blog</p>
+        <p><a href="#">Home</a> | <a href="#">Portfolio</a> | <a href="#">Blog</a> | <a href="#">Contact</a></p>
+    </footer>
+
+</body>
+</html>

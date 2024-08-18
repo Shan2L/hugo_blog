@@ -1,0 +1,18 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Shan2L's Blog
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+tableOfContents: true
+
+markup:
+  markup.highlight:
+    noClasses: false
+    style: "monokai"  # 可选择其他主题，例如 "github", "solarized-dark", "solarized-light" 等等
+    lineNumbersInTable: true  # 是否显示行号
+  markup.tableOfContents:
+    startLevel: 1
+    endLevel: 5

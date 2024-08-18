@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+.hero {
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+.hero img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+}
+.hero h1 {
+    margin: 20px 0;
+}
+.hero p {
+    font-size: 1.2em;
+}
+.about, .portfolio, .blog, .newsletter, footer {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+.about img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.experience, .skill, .interest {
+    margin-top: 20px;
+}
+.portfolio-item, .blog-post {
+    margin-bottom: 20px;
+}
+.portfolio-item img, .blog-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.portfolio-item h3, .blog-post h3 {
+    margin-top: 10px;
+}
+.newsletter input[type="email"] {
+    padding: 10px;
+    margin-right: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+footer p, footer a {
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+}
+.blog-post{
+    display: flex; 
+    align-items: flex-start; 
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    max-width: 100%;
+}
+.blog-post:hover{
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.tag-item, .cat-item, .series-item{
+    margin-left: 1em; 
+    font-size: 14px; 
+    color: #777;
+}
+.tag-item:hover, .cat-item:hover, .series-item:hover{
+    color: red;
+    cursor: pointer;
+    font-size: 15px;
+}
+

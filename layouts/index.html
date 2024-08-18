@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shan2L's Blog</title>
+    <!-- 引入公共 CSS 文件 -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Shan2L's Blog</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Blog</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="about">
+        <img src="{{ "/images/avatar.png" | relURL }}" alt="Shan2L">
+        <h2>About Me</h2>
+        <p>Hello! I'm Shan2L, a passionate developer and writer. I am working as a AI framework engineer in a GPU company. </p>
+        <div class="experience">
+            <h3>Experiences</h3>
+            <ul>
+                <li>
+                    <b>2023 ~ Now</b> &nbsp; As an AI framework engineer, working at an GPU company .
+                </li>
+                <li>
+                    <b>2023 ~ Now</b> &nbsp; As an part-time intern researcher, working at Generative Intelligent Computing Lab, NCSU.
+                </li>
+                <li>
+                    <b>2022 ~ 2023</b> &nbsp; As an intern AI framework engineer, worked at CESG, DCAI, Intel Shanghai.
+                </li>
+            </ul>
+        </div>
+        <div class="skill">
+            <h3>Skills</h3>
+            <ul>
+                <li><b>Programming Languages</b> &emsp; C++, Python, CUDA, HIP, HTML, CSS.</li>
+                <li><b>Deep Learning framework</b> &emsp; Pytorch, Tensorflow.</li>            
+            </ul>
+        </div>
+
+        <div class="interest">
+            <h3>Interests</h3>
+            <ul>
+                <li> Natural Language Processing.AI System</li>
+                <li>  Computer Vision, .</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- <section class="portfolio">
+        <h2>Featured Portfolio</h2>
+        <div class="portfolio-item">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project Title 1</h3>
+            <p>A brief description of your project goes here.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project Title 2</h3>
+            <p>A brief description of your project goes here.</p>
+        </div>
+    </section> -->
+
+    <section class="blog">
+        <h2>Latest Blog Posts</h2>
+        {{ range first 3 .Site.RegularPages }}
+
+        <div class="blog-post" >
+            <!-- Left side: Image -->
+            <div style="flex: 0 0 100px; margin-right: 15px;" >
+                {{ if .Params.cover }}
+                <img src="/{{.File.Dir}}{{.Params.cover}}" alt="Blog Cover" style="width: 100px; height: auto; border-radius: 5px;">
+                {{ else }}
+                <img src="/images/default_cover.png" alt="Blog Post 1" style="width: 100px; height: auto; border-radius: 5px;">   
+                {{ end }}
+
+            </div>
+            
+            <!-- Right side: Content -->
+            <div style="flex: 1;">
+                <h2 style="margin: 0 0 10px 0; font-size: 20px;" onclick="location.href='{{ .RelPermalink }}'">{{.Title}}</h2>
+                <p style="margin: 0; font-size: 14px; color: #777;">{{dateFormat "Monday, Jan 2, 2006" .Date}}</p>
+                <div style="display: flex;">
+                    <div style="font-size: 14px; color: #777;">category: </div>
+                    {{ range .Params.categories }} 
+                        <div class="tag-item" onclick="location.href='/categories/{{.}}'">
+                            {{.}} 
+                        </div>
+                    {{end}}
+                </div>
+                <div style="display: flex;">
+                    <div style="font-size: 14px; color: #777;">tags: </div>
+                    {{ range .Params.tags }} 
+                        <div class="tag-item" onclick="location.href='/tags/{{.}}'">
+                            {{.}} 
+                        </div>
+                    {{end}}
+                </div>
+                <p style="margin-top: 10px; font-size: 16px;">{{.Params.abstract}}</p>
+            </div>
+        </div>
+        
+        {{ end }}
+    </section>
+
+    <section class="newsletter">
+        <h2>Stay Updated!</h2>
+        <p>Subscribe to my newsletter to get the latest updates directly to your inbox.</p>
+        <form action="#">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Shan2L's Blog</p>
+        <p><a href="#">Home</a> | <a href="#">Portfolio</a> | <a href="#">Blog</a> | <a href="#">Contact</a></p>
+    </footer>
+
+</body>
+</html>
