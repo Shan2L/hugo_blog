@@ -1,0 +1,51 @@
+<html>
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="/css/styles.css">
+     <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>{{.Title}}</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/posts">Blog</a>
+            <a href="https://github.com/Shan2L">Github</a>
+            <a href="/categories">Category</a>
+            <a href="/tags">Tag</a>
+        </nav>
+    </header>
+
+    <section class="blog">
+
+        {{ range .Pages}}
+
+            <div class="blog-post" onclick="location.href='{{ .RelPermalink }}'">
+                <!-- Left side: Image -->
+                <div style="flex: 0 0 100px; margin-right: 15px;" >
+                        {{ if .Params.cover }}
+                        <img src="/{{.File.Dir}}{{.Params.cover}}" alt="Blog Cover" style="width: 150px; height: auto; border-radius: 5px;">
+                        {{ else }}
+                        <img src="/images/default_cover.png" alt="Blog Post 1" style="width: 150px; height: auto; border-radius: 5px;">   
+                        {{ end }}
+                </div>
+                
+                <!-- Right side: Content -->
+                <div style="display: flex; align-items: center; ">
+                        <h2 style="font-size: 25px;">{{.Title}}</h2>
+                </div>
+            </div>
+    
+        {{ end }}
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Shan2L's Blog</p>
+        <p><a href="/">Home</a> | <a href="https://github.com/Shan2L">Github</a> | <a href="/posts">Blog</a> </p>
+    </footer>
+  
+  
+</body>
+</html>

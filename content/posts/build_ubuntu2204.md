@@ -5,6 +5,7 @@ draft = false
 abstract = "本文记录了如何在ubuntu22.04操作系统上安装gcc12.2的详细步骤。"
 categories = ["workflow"]
 tags = ["system", "tools", "ubuntu"]
+series = ["build-enssential"]
 +++
 
 

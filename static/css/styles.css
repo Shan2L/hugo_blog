@@ -1,8 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 header {
     background-color: #333;
@@ -114,5 +115,9 @@ footer p, footer a {
     color: red;
     cursor: pointer;
     font-size: 15px;
+}
+
+a.hover {
+    cursor: pointer;
 }
 
